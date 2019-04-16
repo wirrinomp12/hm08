@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<!-- 이 부분은 주석문입니다. 웹 브라우저는 주석을 화면에 출력하지 않습니다. -->
+<html>
+	<head>
+		<!-- 문서제목, 자바스크립트 코드, CSS 스타일 정의, 메타데이터정의 -->
+		<meta charset="utf-8">
+		<title>hm08 : CSS3 advanced</title>
+		<style>
+			div {
+				display: inline-block;
+				position:absolute; /* 절대 배치 */
+				border: 1px solid lightgray;
+			}
+            img{position: absolute;}
+			div>span>p {
+                z-index: 3;
+				display: inline-block; /* div의 자식 p */
+				position: absolute; /* 절대 배치 */
+				height: 20px;
+                left: 100px;
+                top: 100px;
+				width: 15px;
+				background: skyblue;
+			}
+            #tree{
+                z-index: 2;
+				left: 50px;
+				top: 20px;
+            }
+            #back{
+                z-index: 1;
+				left: 10px;
+				top: 20px;
+            }
+            #hm13{
+              z-index: 3;
+				
+				top: 385px;
+				left: 10px;
+				width: 120px;
+                height: 30px;
+				padding: 1px;
+				background: yellow;
+				color: black;
+                font-size: 20px;
+			}
+            #star1{
+                z-index: 3;
+				position: absolute; /* 절대 배치 */
+				height: 20px;
+                left: 170px;
+                top: 310px;
+				width: 20px;
+            }
+             #star2{
+                 z-index: 3;
+				position: absolute; /* 절대 배치 */
+				height: 20px;
+                left: 100px;
+                top: 300px;
+				width: 20px;
+            }
+            #star3{
+                z-index: 3;
+				position: absolute; /* 절대 배치 */
+				height: 20px;
+                left: 250px;
+                top: 280px;
+				width: 20px;
+            }
+             #star4{
+                 z-index: 3;
+				position: absolute; /* 절대 배치 */
+				height: 20px;
+                left: 140px;
+                top: 230px;
+				width: 20px;
+            }
+              #bell1{
+                  z-index: 4;
+				position: absolute; /* 절대 배치 */
+				height: 20px;
+                right: 185px;
+                bottom: 250px;
+				width: 30px;
+            }
+			div>span>p {
+				transition: font-size 5s;
+			}
+			div>span>p:hover {
+                position: absolute;
+               
+				font-size: 500%;
+			}
+            #song{
+                z-index: 4;
+				position: absolute;
+                left: 300px;
+                bottom:200px;
+                top:600px;
+            }
+			
+
+		</style>
+		<script></script>
+	</head>
+
+	<body>
+		<!-- 문서의 본문 텍스트, 이미지, 테이블, 자바스크립트 코드, 동영상 등 -->
+		<h3>Merry Christmas!</h3>
+		<hr>
+		<p>
+			Merry Christmas!
+		</p>
+		<div>
+          <div id="hm13">hm08 박승훈</div>
+			<img id="tree" src="media/christmastree.png"
+			width="400px" height="400px" alt="크리스마스 트리">
+            
+           <span>
+			<p style="left: 210px; top: 80px">
+				M
+			</p>
+			<p style="left:230px;top: 100px">
+				E
+			</p>
+			<p style="left: 250px; top: 120px">
+				R
+			</p>
+			<p style="left:270px; top:140px">
+				R
+			</p>
+			<p style="left:290px; top:160px">
+				Y
+			</p>
+            <p style="left:180px; top:160px">
+				X
+			</p>
+            <p style="left:210px; top:180px">
+				-
+			</p>
+            <p style="left:240px; top:200px">
+				M
+			</p>
+            <p style="left:270px; top:220px">
+				A
+			</p>
+            <p style="left:300px; top:240px">
+				S
+			</p>
+            </span> 
+            <img id = "star1" src="media/별.jpg" width="20px" height="20">
+            <img id = "star2" src="media/별.jpg" width="20px" height="20">
+            <img id = "star3" src="media/별.jpg" width="20px" height="20">
+            <img id = "star4" src="media/별.jpg" width="20px" height="20">
+            <img id = "bell1" src="media/장식.jpg" width="20px" height="20">
+            <img id = "back" src="media/배경.jpg" width="500px" height="450px">
+		</div>
+       <div id = "song">
+            <audio src="media/해피해피크리스마스.mp3"style="right: 10px; bottom: 10px"controls autoplay loop></audio>
+            </div>
+        
+            
+      
+
+	</body>
+
+</html>
