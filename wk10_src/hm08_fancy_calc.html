@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<!-- 이 부분은 주석문입니다. 웹 브라우저는 주석을 화면에 출력하지 않습니다. -->
+<html>
+ <head>
+  <!-- 문서제목, 자바스크립트 코드, CSS 스타일 정의, 메타데이터정의 -->
+  <meta charset="utf-8" />
+  <title>hm08 : Javascript</title>
+  <style>
+        input{
+          padding: 8px;
+          display: inline;
+          margin-top: 4px;
+          font-size: 20px;
+          background-color: #ffffff;
+        }
+        input#display{
+          color: black;
+          background-color: #f10909;
+          font-size: 20px;
+          text-align: right;
+        }
+        input#num{
+          background-color: #ffff66;
+          font-weight: bold;
+        }
+        input#op{
+          background-color: #ff9900;
+          font-weight: bold;
+        }
+        input#clear{
+          background-color: #00ffff;
+        }
+      </style>
+   <script type="text/javascript">
+      var flag=false;//0이 있는 상태
+ 
+      function operation(num){
+         if (flag==false) {//초기화//0이 없는 상태로 만들기
+            //flag=false;
+            cal.result.value="";//값 초기화
+            flag= true;//0이 없는 상태가 됨
+         }
+ 
+         cal.result.value+=num;
+      }
+      function dream(){//result에 출력 함수
+         var str = cal.result.value;
+         var strArray = str.split('^');
+         var findValue = "^";
+         cal.result.value = eval(cal.result.value);
+ 
+         if(str.indexOf(findValue) != -1) { // 만약 내 출력 값에 ^가 들어간다면
+            cal.result.value = Math.pow(strArray[0],strArray[1]);
+         }
+ 
+      }
+      function c(){//clear버튼
+         if (flag==true) {//0이 없는 상태
+            flag=false;//0이 있는 상태
+         cal.result.value = "0";
+         }
+      }
+      function bs() {
+         cal.result.value = cal.result.value.substring(0, cal.result.value.length-1);
+            // substring 으로 0부터 value 길이에서 -1 한 만큼의 길이를 출력한다
+      }
+      function doSin() {
+         cal.result.value = Math.sin((document.cal.result.value*3.141592)/180);
+      }
+      function doCos() {
+         cal.result.value = Math.cos((document.cal.result.value*3.141592)/180);
+      }
+      function doTan() {
+         cal.result.value = Math.tan((document.cal.result.value*3.141592)/180);
+      }
+      function reverse() {
+         dream();
+         cal.result.value = (cal.result.value) * -1;
+      }
+ 
+ 
+   </script>
+</head>
+<body>
+<div align="center">
+        <h3>HM08 계산기</h3>
+<p></p>
+<form name="cal">
+<table >
+   <!-- 첫번째 줄 -->
+   <tr>
+      <td colspan="6"><input style="text-align: right;" type="result" name="result" id ="result" value="0" ></td>
+   </tr>
+   <!-- 두번째 줄 -->
+   <tr>
+      <td align="center" colspan="3"><input id = "clear" type="button" name="clear" value="Clear" onclick="c()"></td>
+      <td align="center" colspan="2"><input id = "op" type="button" name="oper" value="="
+         onclick="dream()"></td>
+      <td align="center"><input id = "display" type="button" name="backspace" value="<--"
+         onclick="bs()"></td>
+   </tr>
+   <!-- 세번째 줄 -->
+   <tr>
+      <td>
+         <input id = "num" type="button"  value="1" onclick="operation('1')"></td>
+      <td align="center">
+         <input id = "num" type="button"  value="2" onclick="operation('2')"></td>
+      <td><input id = "num" type="button"  value="3" onclick="operation('3')"></td>
+      <td colspan="2">
+         <input id = "op" type="button" name="p" value="+" onclick="operation('+')"></td>
+      <td><input id = "display" type="button" name="exp" value="x^y" onclick="operation('^')"></td>
+   </tr>
+   <!-- 네번째 줄 -->
+   <tr>
+      <td><input id = "num" type="button"  value="4" onclick="operation(value)"></td>
+      <td align="center">
+         <input id = "num" type="button"  value="5" onclick="operation(value)"></td>
+      <td><input id = "num" type="button"  value="6" onclick="operation(value)"></td>
+      <td colspan="2">
+         <input id = "op" type="button" name="m" value="-" onclick="operation(value)"></td>
+      <td><input id = "display" type="button" name="sin" value="sin" onclick="doSin()"></td>
+   </tr>
+   <!-- 첫번째 줄 -->
+   <tr>
+      <td><input id = "num" type="button"  value="7" onclick="operation(value)"></td>
+      <td align="center">
+         <input id = "num" type="button"  value="8" onclick="operation(value)"></td>
+      <td><input id = "num" type="button"  value="9" onclick="operation(value)"></td>
+      <td colspan="2">
+         <input id = "op" type="button" name="mul" value="*" onclick="operation(value)"></td>
+      <td><input id = "display" type="button" name="cos" value="cos" onclick="doCos()"></td>
+   </tr>
+   <tr>
+      <td><input id = "num"  type="button"  value="0" onclick="operation(value)"></td>
+      <td><input id = "op" type="button" name="plma" value="+/-" onclick="reverse()"></td>
+      <td><input id = "op" type="button" name="dot" value="." onclick="operation(value)"></td>
+      <td colspan="2">
+         <input id = "op" type="button" name="div" value="/" onclick="operation(value)"></td>
+      <td><input id = "display" type="button" name="tan" value="tan" onclick="doTan()"></td>
+   </tr>
+ 
+ 
+ 
+</table>
+ 
+<h4>COMSI, HM08</h4>
+</div>
+</body>
+</html>
