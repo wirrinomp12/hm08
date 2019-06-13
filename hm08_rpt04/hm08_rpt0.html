@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<!-- 이 부분은 주석문입니다. 웹 브라우저는 주석을 화면에 출력하지 않습니다. -->
+<html>
+  <head>
+    <!-- 문서제목, 자바스크립트 코드, CSS 스타일 정의, 메타데이터정의 -->
+    <meta charset="utf-8" />
+    <title>hm08 : CSS3 advanced</title>
+    <style>
+      #fixed {
+        position: fixed;
+        top: 100px;
+        left: 30px;
+        width: 150px;
+        padding: 5px;
+        color: red;
+      }
+      #fixed2 {
+        position: fixed;
+        top: 390px;
+        left: 140px;
+        width: 100px;
+        padding: 5px;
+        background: Skyblue;
+        color: black;
+      }
+      div#fixed2 {
+        transform: rotate(20deg);
+      }
+      div#fixed2:hover {
+        transform: skew(0deg, -60deg);
+      }
+      div#fixed2:active {
+        transform: scale(1, 5);
+      }
+
+      #fixed3 {
+        position: fixed;
+        top: 190px;
+        left: 110px;
+        width: 15px;
+        padding: 5px;
+        background: green;
+        color: black;
+      }
+      #fixed4 {
+        position: fixed;
+        top: 190px;
+        left: 170px;
+        width: 15px;
+        padding: 5px;
+        background: green;
+        color: black;
+      }
+      #fixed5 {
+        position: fixed;
+        top: 190px;
+        left: 235px;
+        width: 15px;
+        padding: 5px;
+        background: green;
+        color: black;
+      }
+      #fixed6 {
+        position: fixed;
+        top: 240px;
+        left: 190px;
+        width: 15px;
+        padding: 5px;
+        background: green;
+        color: black;
+      }
+      #fixed7 {
+        position: fixed;
+        top: 240px;
+        left: 235px;
+        width: 15px;
+        padding: 5px;
+        background: green;
+        color: black;
+      }
+      #fixed01 {
+        position: fixed;
+        top: 320px;
+        left: 90px;
+        width: 15px;
+        padding: 5px;
+        background: green;
+        color: black;
+      }
+      #fixed02 {
+        position: fixed;
+        top: 320px;
+        left: 140px;
+        width: 15px;
+        padding: 5px;
+        background: green;
+        color: black;
+      }
+      #fixed03 {
+        position: fixed;
+        top: 320px;
+        left: 230px;
+        width: 15px;
+        padding: 5px;
+        background: green;
+        color: black;
+      }
+      #fixed04 {
+        position: fixed;
+        top: 320px;
+        left: 285px;
+        width: 15px;
+        padding: 5px;
+        background: green;
+        color: black;
+      }
+      #fixed05 {
+        position: fixed;
+        top: 390px;
+        left: 25px;
+        width: 70px;
+        padding: 5px;
+        background: Gray;
+        color: black;
+      }
+      #dec {
+        position: fixed;
+        top: 230px;
+        left: 100px;
+        width: 100px;
+        padding: 5px;
+      }
+      #doc {
+        position: fixed;
+        top: 100px;
+        left: 155px;
+        width: 120px;
+        padding: 5px;
+      }
+      #ba {
+        position: fixed;
+        top: 300px;
+        left: 180px;
+        width: 120px;
+        padding: 5px;
+      }
+
+      p {
+        background: white;
+        width: 300px;
+        height: 300px;
+        padding: 10px;
+        border: 20px solid lightgray; /*border-width와 border-style 동시 지정 */
+      }
+      #round {
+        border-image: url("media/1.jpg") 30 round;
+      }
+      #repeat {
+        border-image: url("media/1.jpg") 30 repeat;
+      }
+      #stretch {
+        border-image: url("media/1.jpg") 30 stretch;
+      }
+      @keyframes test {
+        from {
+          font-size: 300%;
+        }
+        to {
+          font-size: 100%;
+        }
+        0% {
+          color: greenyellow;
+        }
+        30% {
+          color: blue;
+        }
+        60% {
+          color: yellow;
+        }
+      }
+      @keyframes test1 {
+        0% {
+          color: red;
+        }
+        30% {
+          color: blue;
+        }
+        60% {
+          color: black;
+        }
+      }
+
+      div {
+        font: normal px verdata;
+      }
+      .dropText {
+        text-shadow: 3px 3px;
+      }
+      .redText {
+        text-shadow: 3px 3px red;
+      }
+      .blurText {
+        text-shadow: 3px 3px 5px Blue;
+      }
+      .glowEffect {
+        text-shadow: 0px 0px 3px red;
+      }
+      .wordArtEffect {
+        color: white;
+        text-shadow: 0px 0px 3px darkBlue;
+      }
+      .threeDEffect {
+        color: white;
+        text-shadow: 2px 2px 4px black;
+      }
+      .multiEffect {
+        color: yellow;
+        text-shadow: 2px 2px 2px black, 0 0 25px blue, 0 0 5px darkblue;
+      }
+
+      .apple {
+        animation-name: test;
+        animation-duration: 3s;
+        animation-iteration-count: infinite;
+      }
+      .dog {
+        animation-name: test1;
+        animation-duration: 3s;
+        animation-iteration-count: infinite;
+      }
+      span {
+        transition: font-size 5s;
+      }
+      span:hover {
+        font-size: 500%;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- 문서의 본문 텍스트, 이미지, 테이블, 자바스크립트 코드, 동영상 등 -->
+    <h3>
+      <div class="glowEffect">
+        메리 화이트 크리스마스 트리 모든 글자에 마우스를 올려보세요.
+      </div>
+    </h3>
+    <hr />
+    <p id="round">
+      <img
+        src="media/christmastree.png"
+        width="300"
+        height="300"
+        alt="크리스마스 트리"
+      />
+    </p>
+
+    <div id="dec">
+      <img src="media/d.png" width="40" height="40" />
+    </div>
+    <div id="doc">
+      <img src="media/star.png" width="60" height="60" />
+    </div>
+    <div id="ba">
+      <img src="media/c.png" width="40" height="40" />
+    </div>
+    <div id="fixed" class="apple">
+      Merry White X-Mas
+    </div>
+    <div id="fixed2" class="dog">
+      hm08, 박승훈
+    </div>
+    <div id="fixed05" class="dog">
+      <span>christmas!</span>
+    </div>
+    <div id="fixed3" class="blurText">
+      <span>M</span>
+    </div>
+    <div id="fixed4" class="blurText">
+      <span>E</span>
+    </div>
+    <div id="fixed5" class="blurText">
+      <span>R</span>
+    </div>
+    <div id="fixed6" class="blurText">
+      <span>R</span>
+    </div>
+    <div id="fixed7" class="blurText">
+      <span>Y</span>
+    </div>
+    <div id="fixed01" class="blurText">
+      <span>X-</span>
+    </div>
+    <div id="fixed02" class="blurText">
+      <span>M</span>
+    </div>
+    <div id="fixed03" class="blurText">
+      <span>A</span>
+    </div>
+    <div id="fixed04" class="blurText">
+      <span>S</span>
+    </div>
+
+    <li>
+      <audio src="media/love.mp3" controls autoplay loop></audio>
+    </li>
+  </body>
+</html>

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<!-- 이 부분은 주석문입니다. 웹 브라우저는 주석을 화면에 출력하지 않습니다. -->
+<html>
+  <head>
+    <!-- 문서제목, 자바스크립트 코드, CSS 스타일 정의, 메타데이터정의 -->
+    <meta charset="utf-8" />
+    <title>hm08 : Semantic tag and form</title>
+    <style>
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+      }
+      .header {
+        width: 100%;
+        height: 10%;
+        background: pink;
+      }
+      .nav {
+        width: 30%;
+        height: 80%;
+        float: left;
+        background: deepskyblue;
+      }
+      .section {
+        width: 70%;
+        height: 80%;
+        float: left;
+        background: yellow;
+      }
+      .aside {
+        width: 15%;
+        height: 70%;
+        float: left;
+        background: orange;
+      }
+      .footer {
+        width: 100%;
+        height: 10%;
+        clear: both;
+        background: plum;
+      }
+    </style>
+    <script></script>
+  </head>
+
+  <body>
+    <!-- 문서의 본문 텍스트, 이미지, 테이블, 자바스크립트 코드, 동영상 등 -->
+    <header class="header">
+      <h1><a>hm08 : 박승훈</a></h1>
+    </header>
+
+    <nav class="nav">
+      <ul>
+        <li>
+          <h2><span style="color:red">개인정보 및 일과</span></h2>
+          <ul>
+            <li>
+              <a href="myself.html" target="myframe">간단한 소개</a>
+            </li>
+            <li>
+              <a href="mylife.html" target="myframe">나의 일과</a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <h2><span style="color:gold">MY SELF</span></h2>
+          <ul>
+            <li>
+              <a href="travel.html" target="myframe">여행지 TOP3</a>
+            </li>
+            <li>
+              <a href="2u.html" target="myframe">가고싶은 여행지 이유</a> <br />
+            </li>
+          </ul>
+        </li>
+        <li>
+          <h2><span style="color:orange">hm08</span></h2>
+          <ul>
+            <li>
+              <a href="form.html" target="myframe">컴시티 축구회 모집</a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+      <li>
+        <h2><span style="color:green"> ∵∵∵X-MAS </span></h2>
+        <ul>
+          <li>
+            <a href="hm08_rpt0.html" target="myframe">초대장</a>
+          </li>
+        </ul>
+      </li>
+    </nav>
+
+    <section class="section" id="main">
+      <article>
+        <iframe src="myself.html" name="myframe" width="770" height="580">
+        </iframe>
+      </article>
+    </section>
+
+    <footer class="footer">
+      <p>
+        Copyright 2019 by hm08
+      </p>
+    </footer>
+  </body>
+</html>
